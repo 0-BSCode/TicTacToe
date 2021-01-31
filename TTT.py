@@ -5,6 +5,9 @@ board = [[0,0,0],
          [0,0,0]]
 
 
+def select_mode():
+    pass
+
 def print_board():
     pass
 
