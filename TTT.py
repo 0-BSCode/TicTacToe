@@ -5,8 +5,11 @@ board = [[0,0,0],
          [0,0,0]]
 
 
-def select_mode():
-    pass
+def select_mode(input):
+    if input:
+        return True
+    else:
+        return False
 
 def print_board():
     pass
