@@ -114,7 +114,7 @@ def opponent_move(symbol, versus):
             position = int(position)
             if is_valid_pos(position, symbol):
                 if versus:
-                print("Opponent move:", position)
+                    print("Opponent move:", position)
                 if check_board(symbol):
                     pass
                 break
@@ -126,7 +126,7 @@ def opponent_move(symbol, versus):
     
 def is_valid_pos(pos, sym):
     # Checks if move is valid
-    
+
     # Subtract one from position for zero-indexing
     pos -= 1
     row = pos // 3
