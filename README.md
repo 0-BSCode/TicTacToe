@@ -1,5 +1,1 @@
-# I am a readme file!
-
-# Hello there!
-
-# Make a change
+# Hi! This is one of my first coding projects.
