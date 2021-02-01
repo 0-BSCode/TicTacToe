@@ -6,6 +6,7 @@ board = [[' ',' ',' '],
 end = False
 draw = False
 
+
 def select_mode(vs, symbol, order):
     # Initialize settings for game
     setup = dict() 
