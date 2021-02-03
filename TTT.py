@@ -41,6 +41,7 @@ def print_board():
             print(f'{board[row][0]} | {board[row][1]} | {board[row][2]}')
         else:
             print("---------")
+    print('')
 
 
 def check_board(sym):
@@ -171,10 +172,11 @@ def main():
           "---------\n"+
           "7 | 8 | 9")
     print("\n3. The game ends when you or your opponent place an X or O along the same column, row, or diagonal")
-    versus = input("Who is your opponent? [0 = player, 1 = computer] ")
+    versus = int(input("Who is your opponent? [0 = player, 1 = computer] "))
     symbol = input("What symbol do you want to use? [Choices: O, X] ")
     order = input("Do you want to go first? [y/n] ")
     FINAL_SETUP = select_mode(versus, symbol, order)
+    print(FINAL_SETUP)
     try:
         while True:
             if FINAL_SETUP["order"]:
@@ -190,6 +192,8 @@ def main():
             print("Player 2 wins!")
         elif end_results["CPU"]:
             print("You lose.")
+        else:
+            print("Draw!")
     print("Thank you for playing!")
 
 if __name__=="__main__":
