@@ -46,6 +46,7 @@ def print_board():
 
 def check_board(sym):
     # Checks if a win or a draw occurs
+
     # Check the rows
     global draw
     for row in range(3):
@@ -53,7 +54,6 @@ def check_board(sym):
         for column in range(3):
             if board[row][column] == sym:
                 row_count += 1
-        # print("Row count:", row_count)
         if row_count == 3:
             return True
 
@@ -63,7 +63,6 @@ def check_board(sym):
         for row in range(3):
             if board[row][column] == sym:
                 column_count += 1
-        # print("Column count:", column_count)
         if column_count == 3:
             return True
     
@@ -74,7 +73,6 @@ def check_board(sym):
             diagonal_count[0] += 1
         if board[2-i][i] == sym:
             diagonal_count[1] += 1
-    # print("Diagonal count:", diagonal_count)
 
     if diagonal_count[0] == 3 or diagonal_count[1] == 3:
         return True
@@ -176,7 +174,6 @@ def main():
     symbol = input("What symbol do you want to use? [Choices: O, X] ")
     order = input("Do you want to go first? [y/n] ")
     FINAL_SETUP = select_mode(versus, symbol, order)
-    print(FINAL_SETUP)
     try:
         while True:
             if FINAL_SETUP["order"]:
