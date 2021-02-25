@@ -1,4 +1,6 @@
-import random, time
+import random, time, pyfirmata
+
+# AR_BOARD = pyfirmata.Arduino('COM4')
 
 board = [[' ',' ',' '],
          [' ',' ',' '],
@@ -96,6 +98,7 @@ def player_move(symbol):
         try:
             position = int(input("Player 1 move: "))
             if is_valid_pos(position, symbol):
+                # AR_BOARD.digital[position+2].write(1)
                 if check_board(symbol):
                     if draw:
                         end_results['Draw'] = True
@@ -122,6 +125,7 @@ def opponent_move(symbol, versus):
         try:
             position = int(position)
             if is_valid_pos(position, symbol):
+                # AR_BOARD.digital[position+2].write(1)
                 if versus:
                     print("Opponent move:", position)
                 if check_board(symbol):
@@ -192,6 +196,9 @@ def main():
         else:
             print("Draw!")
     print("Thank you for playing!")
+    # for i in range(3, 12):
+    #     time.sleep(0.2)
+    #     AR_BOARD.digital[i].write(0)
 
 if __name__=="__main__":
     main()
