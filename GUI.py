@@ -1,6 +1,5 @@
 import pygame as pg
 import random, time
-# from TTT import *
 
 RES = (500,500)
 BLACK = (0,0,0)
