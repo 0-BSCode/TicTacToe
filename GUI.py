@@ -159,9 +159,7 @@ class Board():
             for b_cell in range(0, 3):
                 if board[b_row][b_cell] == ' ':
                     empty_cells.append((b_row, b_cell))
-        print(empty_cells)
         move = random.randint(0, len(empty_cells) - 1)
-        print("Move:", move)
         row = empty_cells[move][0]
         cell = empty_cells[move][1]
         board[row][cell] = "O"
