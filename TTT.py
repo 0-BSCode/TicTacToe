@@ -1,5 +1,7 @@
-import random, time, pyfirmata
+import random, time
 
+# For integration with Arduino
+# import pyfirmata
 # AR_BOARD = pyfirmata.Arduino('COM4')
 
 board = [[' ',' ',' '],
